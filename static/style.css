@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+}
+.container{
+    display: block;
+    text-align: center;
+}
+img{
+    width: 180px;
+    height:70px;
+}
+.search_field{
+    width: 700px;
+    height: 40px;
+    border-radius: 1ex;
+    padding:10px;
+    float:center;
+}
+.search{
+    text-align: center;
+    padding-top: 300px;
+}

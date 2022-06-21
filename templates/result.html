@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename="font-awesome/css/font-awesome.min.css")}}">
+    <link rel="stylesheet" href="{{url_for('static',filename="bootstrap.min.css")}}">
+    <link rel="stylesheet" href="{{url_for('static',filename="result.css")}}">
+</head>
+<body class="m-heading">
+    <div class="container top-bar">
+        <img class="logoImage" src="{{url_for('static',filename="imdb-logo-transparent.png")}}">
+    </div><br><br>
+    <h3 class="m-num"><center> Number of Movies Searched = {{num}}</center></h3><br>
+    <div class="container align-item-center" id="movies-list">
+        {% for i in temp.find_all('div',class_='lister-item mode-advanced') %}
+            <div class="row movies-details align-item-center">
+                <div class="mImage col-2">
+                    <img alt="Image Here" src="{{i.find('img',class_='loadlate').get('loadlate')}}" width="67px" height="98px">
+                </div>
+                <div class="card-body col-10">
+                    <h4 class="mName">{{i.h3.a.text}}
+                    <span class="text-muted">{{i.find("span",class_="text-muted").text}}</span></h4>
+                    <p class="text-muted small-font">
+                        {{i.p.text}}
+                    </p>
+                    <div class="row">
+                        <span class="col-4 rating-star small-font"><i class="fa fa-star checked"></i>{{i.strong.text}}</span>
+                        <span class="col-8 metascore small-font">{{i.find("div",class_="ratings-metascore").text}}</span>
+                    </div>
+                    <div>
+                        <p class="text-muted"></p>
+                    </div>
+                  
+                </div>
+            </div>
+
+        
+        {% endfor %}
+       
+    </div>
+        
+      
+
+
+</body>
+</html>

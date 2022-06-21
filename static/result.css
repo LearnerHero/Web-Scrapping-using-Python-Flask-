@@ -1,0 +1,51 @@
+.m-heading{
+    font-family: 'Roboto', sans-serif;
+}
+.top-bar{
+    background-color:black;
+    width: auto;
+    height:80px;
+    
+}
+.logoImage{
+    width:160px;
+    height:80px;
+    padding:12px;
+}
+
+#movies-list{
+    width: auto;
+    padding-left: 10px;
+    margin: auto;
+}
+.movies-details{
+    border-bottom: 2px solid #ffffff;
+    width: 620px;
+    height: 205px;
+    background-color: #f7f8f7;
+    margin: auto;
+    padding:10px;
+}
+.mName{
+    color: rgb(37, 37, 172);
+}
+.checked{
+    color:orange;
+}
+.small-font{
+    font-size: smaller;
+}
+.card-body{
+    display: inline;
+}
+.rating-star{
+    font-weight: bold;
+}
+.metascore{
+    color: rgb(37, 37, 172);
+}
+.m-num{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-weight: bolder;
+}
